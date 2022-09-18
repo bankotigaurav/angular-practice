@@ -1,0 +1,10 @@
+<div>
+  <h3>Parent Component</h3>
+  <p>This is message from child:- {{ childMsg }}</p>
+  <p>Session Id:- {{ session }}</p>
+  <p>This is data from subject:-{{ subData.message }}</p>
+  <app-child
+    [messageToChild]="message"
+    (messageToParent)="childMessage($event)"
+  ></app-child>
+</div>

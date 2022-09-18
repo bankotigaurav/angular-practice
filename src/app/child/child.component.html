@@ -1,0 +1,32 @@
+<div>
+  <h3>Child Component</h3>
+  <p>This message is from parent:- {{ messageToChild }}</p>
+
+  <form
+    [formGroup]="loginForm"
+    (ngSubmit)="loginFormSubmit(loginForm)"
+    novalidate
+  >
+    <div class="form-control">
+      <label for="name">User Name</label>
+      <input
+        type="text"
+        name="username1"
+        id="name"
+        [formControlName]="username"
+      />
+    </div>
+    <div class="form-control">
+      <label for="password">Password</label>
+      <input
+        type="password"
+        name="userpass"
+        id="password"
+        [formControlName]="password"
+      />
+    </div>
+    <div class="form-control">
+      <button type="submit">Login</button>
+    </div>
+  </form>
+</div>
